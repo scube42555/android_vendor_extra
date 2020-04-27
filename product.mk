@@ -45,7 +45,7 @@ GAPPS_FORCE_PIXEL_LAUNCHER := true
 GAPPS_EXCLUDED_PACKAGES += WebViewGoogle
 
 # mindthegapps
-#$(call inherit-product, vendor/opengapps/common/common-vendor.mk)
+#$(call inherit-product, vendor/gapps/common/common-vendor.mk)
 
 # opengapps
 $(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
@@ -61,8 +61,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/extra/overlay
 
 # Use own updater
 PRODUCT_PROPERTY_OVERRIDES += lineage.updater.uri=https://scubeOS.barkascruff.com/api/v1/{device}/{type}/{incr}
-#PRODUCT_EXTRA_RECOVERY_KEYS += \
-#    ~/.android-certs/releasekey
 
 #include Lawnchair
 PRODUCT_PACKAGES += \
@@ -73,7 +71,7 @@ PRODUCT_COPY_FILES += \
     vendor/extra/config/permissions/privapp-permissions-lawnchair.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-lawnchair.xml \
     vendor/extra/config/permissions/lawnchair-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
 
-# Overlays
+# Lawnchair Overlays
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/extra/lawnchairoverlay/
 
